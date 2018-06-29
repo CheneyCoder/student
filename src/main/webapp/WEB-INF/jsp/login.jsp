@@ -43,9 +43,9 @@
 				<!-- margin:0px auto; 控制当前标签居中 -->
 				<fieldset style="width: auto; margin: 0px auto;">
 					<legend>
-						<font style="font-size:15px" face="宋体">
-							欢迎使用BOOT客户管理系统
-						</font>
+							<font style="font-size:15px;align:center" face="宋体">
+							欢迎使用希望小学学生管理系统
+							</font>
 					</legend>
 					<font color="red">
 						<%-- 提示信息--%>

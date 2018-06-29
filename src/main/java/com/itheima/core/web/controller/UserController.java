@@ -27,8 +27,8 @@ public class UserController {
 			// 将用户对象添加到Session
 			session.setAttribute("USER_SESSION", user);
 			// 跳转到主页面
-//			return "customer";
-			return "redirect:customer/list.action";
+			return "main";
+//			return "redirect:main/list.action";
 		}
 		model.addAttribute("msg", "账号或密码错误，请重新输入！");
          // 返回到登录页面
@@ -38,9 +38,9 @@ public class UserController {
 	/**
 	 * 模拟其他类中跳转到客户管理页面的方法
 	 */
-	@RequestMapping(value = "/toCustomer.action")
-	public String toCustomer() {
-	    return "customer";
+	@RequestMapping(value = "/toMain.action")
+	public String toMain() {
+	    return "main";
 	}
 	
 	/**

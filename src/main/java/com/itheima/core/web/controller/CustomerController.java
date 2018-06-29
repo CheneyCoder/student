@@ -41,7 +41,7 @@ public class CustomerController {
 	/**
 	 *  客户列表
 	 */
-	@RequestMapping(value = "/customer/list.action")
+	@RequestMapping(value = "/student/list.action")
 	public String list(@RequestParam(defaultValue="1")Integer page,
 			@RequestParam(defaultValue="10")Integer rows, 
 			String custName, String custSource, String custIndustry,
@@ -68,7 +68,7 @@ public class CustomerController {
 		model.addAttribute("custSource", custSource);
 		model.addAttribute("custIndustry", custIndustry);
 		model.addAttribute("custLevel", custLevel);
-		return "customer";
+		return "student";
 	}
 	
 	/**

@@ -12,7 +12,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>客户管理-BootCRM</title>
+	<title>系统主页</title>
 	<!-- 引入css样式文件 -->
 	<!-- Bootstrap Core CSS -->
 	<link href="<%=basePath%>css/bootstrap.min.css" rel="stylesheet" />
@@ -32,7 +32,7 @@
   <nav class="navbar navbar-default navbar-static-top" role="navigation"
 		 style="margin-bottom: 0">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="<%=basePath%>customer/list.action">BOOT客户管理系统 v2.0</a>
+		<a class="navbar-brand" href="<%=basePath%>toMain.action">希望小学学生管理系统</a>
 	</div>
 	<!-- 导航栏右侧图标部分 -->
 	<ul class="nav navbar-top-links navbar-right">
@@ -46,11 +46,11 @@
 				<li>
 				    <a href="#">
 						<div>
-							<strong>张经理</strong> <span class="pull-right text-muted">
+							<strong>罗校长</strong> <span class="pull-right text-muted">
 								<em>昨天</em>
 							</span>
 						</div>
-						<div>今天晚上开会，讨论一下下个月工作的事...</div>
+						<div>明天上午九点，讨论一下下周新生入学仪式的安排...</div>
 				    </a>
 				</li>
 				<li class="divider"></li>
@@ -204,13 +204,13 @@
 					</div> 
 				</li>
 				<li>
-				    <a href="${pageContext.request.contextPath }/customer/list.action" class="active">
-				      <i class="fa fa-edit fa-fw"></i> 客户管理
+				    <a href="${pageContext.request.contextPath }/student/list.action" class="active">
+				      <i class="fa fa-edit fa-fw"></i> 学生管理
 				    </a>
 				</li>
 				<li>
 				    <a href="#">
-				      <i class="fa fa-dashboard fa-fw" ></i> 客户拜访
+				      <i class="fa fa-dashboard fa-fw" ></i> 家长拜访
 				    </a>
 				</li>
 			</ul>
@@ -222,7 +222,7 @@
 	<div id="page-wrapper">
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">客户管理</h1>
+				<h1 class="page-header">学生管理</h1>
 			</div>
 			<!-- /.col-lg-12 -->
 		</div>
@@ -232,12 +232,12 @@
 				<form class="form-inline" method="post"
 				      action="${pageContext.request.contextPath }/customer/list.action">
 					<div class="form-group">
-						<label for="customerName">客户名称</label> 
+						<label for="customerName">学生姓名</label>
 						<input type="text" class="form-control" id="customerName" 
 						                   value="${custName }" name="custName" />
 					</div>
 					<div class="form-group">
-						<label for="customerFrom">客户来源</label> 
+						<label for="customerFrom">学生年级</label>
 						<select	class="form-control" id="customerFrom" name="custSource">
 							<option value="">--请选择--</option>
 							<c:forEach items="${fromType}" var="item">
@@ -249,7 +249,7 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="custIndustry">所属行业</label> 
+						<label for="custIndustry">学生班级</label>
 						<select	class="form-control" id="custIndustry"  name="custIndustry">
 							<option value="">--请选择--</option>
 							<c:forEach items="${industryType}" var="item">
@@ -261,7 +261,7 @@
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="custLevel">客户级别</label>
+						<label for="custLevel">学生来源</label>
 						<select	class="form-control" id="custLevel" name="custLevel">
 							<option value="">--请选择--</option>
 							<c:forEach items="${levelType}" var="item">
@@ -281,18 +281,18 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
-					<div class="panel-heading">客户信息列表</div>
+					<div class="panel-heading">学生信息列表</div>
 					<!-- /.panel-heading -->
 					<table class="table table-bordered table-striped">
 						<thead>
 							<tr>
 								<th>编号</th>
-								<th>客户名称</th>
-								<th>客户来源</th>
-								<th>客户所属行业</th>
-								<th>客户级别</th>
-								<th>固定电话</th>
-								<th>手机</th>
+								<th>学生名称</th>
+								<th>学生年级</th>
+								<th>学生班级</th>
+								<th>学生来源</th>
+								<th>出生日期</th>
+								<th>家庭联系方式</th>
 								<th>操作</th>
 							</tr>
 						</thead>
@@ -335,7 +335,7 @@
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<h4 class="modal-title" id="myModalLabel">新建客户信息</h4>
+				<h4 class="modal-title" id="myModalLabel">新建学生信息</h4>
 			</div>
 			<div class="modal-body">
 				<form class="form-horizontal" id="new_customer_form">
