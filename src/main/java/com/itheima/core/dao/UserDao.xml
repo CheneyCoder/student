@@ -5,7 +5,7 @@
     <!-- 查询用户 -->
     <select id="findUser" parameterType="String" resultType="user">
 	    select *
-	    from sys_user
+	    from adm_user
 	    where user_code = #{usercode}
 	    and user_password =#{password}
 	    and user_state = '1'

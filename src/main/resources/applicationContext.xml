@@ -15,7 +15,7 @@
     http://www.springframework.org/schema/tx 
     http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
     <!--读取db.properties -->
-    <context:property-placeholder location="classpath:db.properties"/>
+    <context:property-placeholder location="classpath:db.properties" ignore-unresolvable="true"/>
     <!-- 配置数据源 -->
     <bean id="dataSource" 
          class="org.apache.commons.dbcp2.BasicDataSource">
@@ -73,8 +73,10 @@
 	</bean>
 	<!-- 接口开发,扫描 com.itheima.core.dao包 ，写在此包下的接口即可被扫描到 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<!-- 给出需要扫描Dao接口包 -->
 		<property name="basePackage" value="com.itheima.core.dao" />
 	</bean>
 	<!-- 配置扫描@Service注解 -->
-	<context:component-scan base-package="com.itheima.core.service"/>	
+	<context:component-scan base-package="com.itheima.core.service"/>
+
 </beans>

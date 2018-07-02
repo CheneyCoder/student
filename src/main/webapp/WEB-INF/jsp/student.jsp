@@ -12,7 +12,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>系统主页</title>
+	<title>学生管理</title>
 	<!-- 引入css样式文件 -->
 	<!-- Bootstrap Core CSS -->
 	<link href="<%=basePath%>css/bootstrap.min.css" rel="stylesheet" />
@@ -20,9 +20,9 @@
 	<link href="<%=basePath%>css/metisMenu.min.css" rel="stylesheet" />
 	<!-- DataTables CSS -->
 	<link href="<%=basePath%>css/dataTables.bootstrap.css" rel="stylesheet" />
-	<!-- Custom CSS -->
+	<!-- stom CSS -->
 	<link href="<%=basePath%>css/sb-admin-2.css" rel="stylesheet" />
-	<!-- Custom Fonts -->
+	<!-- stom Fonts -->
 	<link href="<%=basePath%>css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link href="<%=basePath%>css/boot-crm.css" rel="stylesheet" type="text/css" />
 </head>
@@ -63,111 +63,7 @@
 			</ul>
 		</li>
 		<!-- 邮件通知 end -->
-		<!-- 任务通知 start -->
-		<li class="dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
-			    <i class="fa fa-tasks fa-fw"></i>
-				<i class="fa fa-caret-down"></i>
-			</a>
-			<ul class="dropdown-menu dropdown-tasks">
-				<li>
-				    <a href="#">
-						<div>
-							<p>
-								<strong>任务 1</strong> 
-								<span class="pull-right text-muted">完成40%</span>
-							</p>
-							<div class="progress progress-striped active">
-								<div class="progress-bar progress-bar-success"
-									role="progressbar" aria-valuenow="40" aria-valuemin="0"
-									aria-valuemax="100" style="width: 40%">
-									<span class="sr-only">完成40%</span>
-								</div>
-							</div>
-						</div>
-				    </a>
-				</li>
-				<li class="divider"></li>
-				<li>
-				    <a href="#">
-						<div>
-							<p>
-								<strong>任务 2</strong> 
-								<span class="pull-right text-muted">完成20%</span>
-							</p>
-							<div class="progress progress-striped active">
-								<div class="progress-bar progress-bar-info" role="progressbar"
-									aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-									style="width: 20%">
-									<span class="sr-only">完成20%</span>
-								</div>
-							</div>
-						</div>
-				    </a>
-				</li>
-				<li class="divider"></li>
-				<li>
-				    <a class="text-center" href="#"> 
-				        <strong>查看所有任务</strong>
-						<i class="fa fa-angle-right"></i>
-				    </a>
-				</li>
-			</ul> 
-		</li>
-		<!-- 任务通知 end -->
-		<!-- 消息通知 start -->
-		<li class="dropdown">
-			<a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
-				<i class="fa fa-bell fa-fw"></i>
-				<i class="fa fa-caret-down"></i>
-			</a>
-			<ul class="dropdown-menu dropdown-alerts">
-				<li>
-				    <a href="#">
-						<div>
-							<i class="fa fa-comment fa-fw"></i> 新回复 
-							<span class="pull-right text-muted small">4分钟之前</span>
-						</div>
-				    </a>
-				</li>
-				<li class="divider"></li>
-				<li>
-				    <a href="#">
-						<div>
-							<i class="fa fa-envelope fa-fw"></i> 新消息 
-							<span class="pull-right text-muted small">4分钟之前</span>
-						</div>
-				    </a>
-				</li>
-				<li class="divider"></li>
-				<li>
-				    <a href="#">
-						<div>
-							<i class="fa fa-tasks fa-fw"></i> 新任务 
-							<span class="pull-right text-muted small">4分钟之前</span>
-						</div>
-				    </a>
-				</li>
-				<li class="divider"></li>
-				<li>
-				    <a href="#">
-						<div>
-							<i class="fa fa-upload fa-fw"></i> 服务器重启 
-							<span class="pull-right text-muted small">4分钟之前</span>
-						</div>
-				    </a>
-				</li>
-				<li class="divider"></li>
-				<li>
-				    <a class="text-center" href="#"> 
-				        <strong>查看所有提醒</strong>
-						<i class="fa fa-angle-right"></i>
-				    </a>
-				</li>
-			</ul> 
-		</li>
-		<!-- 消息通知 end -->
-		<!-- 用户信息和系统设置 start -->
+		<!-- 用户信息 start -->
 		<li class="dropdown">
 			<a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
 				<i class="fa fa-user fa-fw"></i>
@@ -178,7 +74,6 @@
 				               用户：${USER_SESSION.user_name}
 				    </a>
 				</li>
-				<li><a href="#"><i class="fa fa-gear fa-fw"></i> 系统设置</a></li>
 				<li class="divider"></li>
 				<li>
 					<a href="${pageContext.request.contextPath }/logout.action">
@@ -187,14 +82,14 @@
 				</li>
 			</ul> 
 		</li>
-		<!-- 用户信息和系统设置结束 -->
+		<!-- 用户信息 结束 -->
 	</ul>
 	<!-- 左侧显示列表部分 start-->
 	<div class="navbar-default sidebar" role="navigation">
 		<div class="sidebar-nav navbar-collapse">
 			<ul class="nav" id="side-menu">
 				<li class="sidebar-search">
-					<div class="input-group custom-search-form">
+					<div class="input-group stom-search-form">
 						<input type="text" class="form-control" placeholder="查询内容...">
 						<span class="input-group-btn">
 							<button class="btn btn-default" type="button">
@@ -218,7 +113,7 @@
 	</div>
 	<!-- 左侧显示列表部分 end--> 
   </nav>
-    <!-- 客户列表查询部分  start-->
+    <!-- 学生列表查询部分  start-->
 	<div id="page-wrapper">
 		<div class="row">
 			<div class="col-lg-12">
@@ -230,43 +125,43 @@
 		<div class="panel panel-default">
 			<div class="panel-body">
 				<form class="form-inline" method="post"
-				      action="${pageContext.request.contextPath }/customer/list.action">
+				      action="${pageContext.request.contextPath }/student/list.action">
 					<div class="form-group">
-						<label for="customerName">学生姓名</label>
-						<input type="text" class="form-control" id="customerName" 
-						                   value="${custName }" name="custName" />
+						<label for="studentName">学生姓名</label>
+						<input type="text" class="form-control" id="studentName" 
+						                   value="${stName }" name="stName" />
 					</div>
 					<div class="form-group">
-						<label for="customerFrom">学生年级</label>
-						<select	class="form-control" id="customerFrom" name="custSource">
+						<label for="studentSex">学生性别</label>
+						<select	class="form-control" id="studentSex" name="stSex">
 							<option value="">--请选择--</option>
-							<c:forEach items="${fromType}" var="item">
+							<c:forEach items="${SexType}" var="item">
 								<option value="${item.dict_id}"
-								       <c:if test="${item.dict_id == custSource}">selected</c:if>>
+								       <c:if test="${item.dict_id == stSex}">selected</c:if>>
 								    ${item.dict_item_name }
 								</option>
 							</c:forEach>
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="custIndustry">学生班级</label>
-						<select	class="form-control" id="custIndustry"  name="custIndustry">
+						<label for="stGrade">学生年级</label>
+						<select	class="form-control" id="stGrade"  name="stGrade">
 							<option value="">--请选择--</option>
-							<c:forEach items="${industryType}" var="item">
+							<c:forEach items="${GradeType}" var="item">
 								<option value="${item.dict_id}"
-								        <c:if test="${item.dict_id == custIndustry}"> selected</c:if>>
+								        <c:if test="${item.dict_id == stGrade}"> selected</c:if>>
 								    ${item.dict_item_name }
 								</option>
 							</c:forEach>
 						</select>
 					</div>
 					<div class="form-group">
-						<label for="custLevel">学生来源</label>
-						<select	class="form-control" id="custLevel" name="custLevel">
+						<label for="stClass">学生班级</label>
+						<select	class="form-control" id="stClass" name="stClass">
 							<option value="">--请选择--</option>
-							<c:forEach items="${levelType}" var="item">
+							<c:forEach items="${ClassType}" var="item">
 								<option value="${item.dict_id}"
-								        <c:if test="${item.dict_id == custLevel}"> selected</c:if>>
+								        <c:if test="${item.dict_id == stClass}"> selected</c:if>>
 								    ${item.dict_item_name }
 								</option>
 							</c:forEach>
@@ -277,7 +172,7 @@
 			</div>
 		</div>
 		<a href="#" class="btn btn-primary" data-toggle="modal" 
-		           data-target="#newCustomerDialog" onclick="clearCustomer()">新建</a>
+		           data-target="#newstudentDialog" onclick="clearstudent()">新建</a>
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="panel panel-default">
@@ -288,34 +183,34 @@
 							<tr>
 								<th>编号</th>
 								<th>学生名称</th>
+                                <th>学生性别</th>
 								<th>学生年级</th>
 								<th>学生班级</th>
-								<th>学生来源</th>
 								<th>出生日期</th>
-								<th>家庭联系方式</th>
+								<th>联系方式</th>
 								<th>操作</th>
 							</tr>
 						</thead>
 						<tbody>
 							<c:forEach items="${page.rows}" var="row">
 								<tr>
-									<td>${row.cust_id}</td>
-									<td>${row.cust_name}</td>
-									<td>${row.cust_source}</td>
-									<td>${row.cust_industry}</td>
-									<td>${row.cust_level}</td>
-									<td>${row.cust_phone}</td>
-								    <td>${row.cust_mobile}</td>
+									<td>${row.st_id}</td>
+									<td>${row.st_name}</td>
+									<td>${row.st_sex}</td>
+									<td>${row.st_grade}</td>
+									<td>${row.st_class}</td>
+									<td>${row.st_birthday}</td>
+								    <td>${row.st_mobile}</td>
 									<td>
-										<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#customerEditDialog" onclick= "editCustomer(${row.cust_id})">修改</a>
-										<a href="#" class="btn btn-danger btn-xs" onclick="deleteCustomer(${row.cust_id})">删除</a>
+										<a href="#" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#studentEditDialog" onclick= "editstudent(${row.st_id})">修改</a>
+										<a href="#" class="btn btn-danger btn-xs" onclick="deletestudent(${row.st_id})">删除</a>
 									</td>
 								</tr>
 							</c:forEach>
 						</tbody>
 					</table>
 					<div class="col-md-12 text-right">
-						<itheima:page url="${pageContext.request.contextPath }/customer/list.action" />
+						<itheima:page url="${pageContext.request.contextPath }/student/list.action" />
 					</div>
 					<!-- /.panel-body -->
 				</div>
@@ -324,10 +219,10 @@
 			<!-- /.col-lg-12 -->
 		</div>
 	</div>
-	<!-- 客户列表查询部分  end-->
+	<!-- 学生列表查询部分  end-->
 </div>
-<!-- 创建客户模态框 -->
-<div class="modal fade" id="newCustomerDialog" tabindex="-1" role="dialog"
+<!-- 创建学生模态框 -->
+<div class="modal fade" id="newstudentDialog" tabindex="-1" role="dialog"
 	aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -338,22 +233,22 @@
 				<h4 class="modal-title" id="myModalLabel">新建学生信息</h4>
 			</div>
 			<div class="modal-body">
-				<form class="form-horizontal" id="new_customer_form">
+				<form class="form-horizontal" id="new_student_form">
 					<div class="form-group">
-						<label for="new_customerName" class="col-sm-2 control-label">
-						    客户名称
+						<label for="new_studentName" class="col-sm-2 control-label">
+						    学生名称
 						</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="new_customerName" placeholder="客户名称" name="cust_name" />
+							<input type="text" class="form-control" id="new_studentName" placeholder="学生名称" name="st_name" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="new_customerFrom" style="float:left;padding:7px 15px 0 27px;">客户来源</label> 
+						<label for="new_studentSex" style="float:left;padding:7px 15px 0 27px;">学生性别</label> 
 						<div class="col-sm-10">
-							<select	class="form-control" id="new_customerFrom" name="cust_source">
+							<select	class="form-control" id="new_studentSex" name="st_Sex">
 								<option value="">--请选择--</option>
-								<c:forEach items="${fromType}" var="item">
-									<option value="${item.dict_id}"<c:if test="${item.dict_id == custSource}">selected</c:if>>
+								<c:forEach items="${SexType}" var="item">
+									<option value="${item.dict_id}"<c:if test="${item.dict_id == stSex}">selected</c:if>>
 									${item.dict_item_name }									
 									</option>
 								</c:forEach>
@@ -361,12 +256,12 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="new_custIndustry" style="float:left;padding:7px 15px 0 27px;">所属行业</label>
+						<label for="new_stClass" style="float:left;padding:7px 15px 0 27px;">学生年级</label>
 						<div class="col-sm-10"> 
-							<select	class="form-control" id="new_custIndustry"  name="cust_industry">
+							<select	class="form-control" id="new_stGrade"  name="st_Grade">
 								<option value="">--请选择--</option>
-								<c:forEach items="${industryType}" var="item">
-									<option value="${item.dict_id}"<c:if test="${item.dict_id == custIndustry}"> selected</c:if>>
+								<c:forEach items="${GradeType}" var="item">
+									<option value="${item.dict_id}"<c:if test="${item.dict_id == stGrade}"> selected</c:if>>
 									${item.dict_item_name }
 									</option>
 								</c:forEach>
@@ -374,57 +269,45 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="new_custLevel" style="float:left;padding:7px 15px 0 27px;">客户级别</label>
+						<label for="new_stClass" style="float:left;padding:7px 15px 0 27px;">学生班级</label>
 						<div class="col-sm-10">
-							<select	class="form-control" id="new_custLevel" name="cust_level">
+							<select	class="form-control" id="new_stClass" name="st_Class">
 								<option value="">--请选择--</option>
-								<c:forEach items="${levelType}" var="item">
-									<option value="${item.dict_id}"<c:if test="${item.dict_id == custLevel}"> selected</c:if>>${item.dict_item_name }</option>
+								<c:forEach items="${ClassType}" var="item">
+									<option value="${item.dict_id}"<c:if test="${item.dict_id == stClass}"> selected</c:if>>${item.dict_item_name }</option>
 								</c:forEach>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="new_linkMan" class="col-sm-2 control-label">联系人</label>
+						<label for="new_birthday" class="col-sm-2 control-label">出生日期</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="new_linkMan" placeholder="联系人" name="cust_linkman" />
+							<input type="text" class="form-control" id="new_birthday" placeholder="出生日期" name="st_birthday" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="new_phone" class="col-sm-2 control-label">固定电话</label>
+						<label for="new_mobile" class="col-sm-2 control-label">联系方式</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="new_phone" placeholder="固定电话" name="cust_phone" />
+							<input type="text" class="form-control" id="new_mobile" placeholder="家庭联系方式" name="st_mobile" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="new_mobile" class="col-sm-2 control-label">移动电话</label>
+						<label for="new_address" class="col-sm-2 control-label">家庭住址</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="new_mobile" placeholder="移动电话" name="cust_mobile" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="new_zipcode" class="col-sm-2 control-label">邮政编码</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="new_zipcode" placeholder="邮政编码" name="cust_zipcode" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="new_address" class="col-sm-2 control-label">联系地址</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="new_address" placeholder="联系地址" name="cust_address" />
+							<input type="text" class="form-control" id="new_address" placeholder="家庭联系地址" name="st_address" />
 						</div>
 					</div>
 				</form>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-				<button type="button" class="btn btn-primary" onclick="createCustomer()">创建客户</button>
+				<button type="button" class="btn btn-primary" onclick="createstudent()">创建学生</button>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- 修改客户模态框 -->
-<div class="modal fade" id="customerEditDialog" tabindex="-1" role="dialog"
+<!-- 修改学生模态框 -->
+<div class="modal fade" id="studentEditDialog" tabindex="-1" role="dialog"
 	aria-labelledby="myModalLabel">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
@@ -432,85 +315,73 @@
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<h4 class="modal-title" id="myModalLabel">修改客户信息</h4>
+				<h4 class="modal-title" id="myModalLabel">修改学生信息</h4>
 			</div>
 			<div class="modal-body">
-				<form class="form-horizontal" id="edit_customer_form">
-					<input type="hidden" id="edit_cust_id" name="cust_id"/>
+				<form class="form-horizontal" id="edit_student_form">
+					<input type="hidden" id="edit_st_id" name="st_id"/>
 					<div class="form-group">
-						<label for="edit_customerName" class="col-sm-2 control-label">客户名称</label>
+						<label for="edit_studentName" class="col-sm-2 control-label">学生名称</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="edit_customerName" placeholder="客户名称" name="cust_name" />
+							<input type="text" class="form-control" id="edit_studentName" placeholder="学生名称" name="st_name" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="edit_customerFrom" style="float:left;padding:7px 15px 0 27px;">客户来源</label> 
+						<label for="edit_studentSex" style="float:left;padding:7px 15px 0 27px;">学生性别</label> 
 						<div class="col-sm-10">
-							<select	class="form-control" id="edit_customerFrom" name="cust_source">
+							<select	class="form-control" id="edit_studentSex" name="st_Sex">
 								<option value="">--请选择--</option>
-								<c:forEach items="${fromType}" var="item">
-									<option value="${item.dict_id}"<c:if test="${item.dict_id == custSource}"> selected</c:if>>${item.dict_item_name }</option>
+								<c:forEach items="${SexType}" var="item">
+									<option value="${item.dict_id}"<c:if test="${item.dict_id == stSex}"> selected</c:if>>${item.dict_item_name }</option>
 								</c:forEach>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="edit_custIndustry" style="float:left;padding:7px 15px 0 27px;">所属行业</label>
+						<label for="edit_stGrade" style="float:left;padding:7px 15px 0 27px;">学生年级</label>
 						<div class="col-sm-10"> 
-							<select	class="form-control" id="edit_custIndustry"  name="cust_industry">
+							<select	class="form-control" id="edit_stGrade"  name="st_Grade">
 								<option value="">--请选择--</option>
-								<c:forEach items="${industryType}" var="item">
-									<option value="${item.dict_id}"<c:if test="${item.dict_id == custIndustry}"> selected</c:if>>${item.dict_item_name }</option>
+								<c:forEach items="${GradeType}" var="item">
+									<option value="${item.dict_id}"<c:if test="${item.dict_id == stGrade}"> selected</c:if>>${item.dict_item_name }</option>
 								</c:forEach>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="edit_custLevel" style="float:left;padding:7px 15px 0 27px;">客户级别</label>
+						<label for="edit_stClass" style="float:left;padding:7px 15px 0 27px;">学生班级</label>
 						<div class="col-sm-10">
-							<select	class="form-control" id="edit_custLevel" name="cust_level">
+							<select	class="form-control" id="edit_stClass" name="st_Class">
 								<option value="">--请选择--</option>
-								<c:forEach items="${levelType}" var="item">
-									<option value="${item.dict_id}"<c:if test="${item.dict_id == custLevel}"> selected</c:if>>${item.dict_item_name }</option>
+								<c:forEach items="${ClassType}" var="item">
+									<option value="${item.dict_id}"<c:if test="${item.dict_id == stClass}"> selected</c:if>>${item.dict_item_name }</option>
 								</c:forEach>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="edit_linkMan" class="col-sm-2 control-label">联系人</label>
+						<label for="edit_birthday" class="col-sm-2 control-label">出生日期</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="edit_linkMan" placeholder="联系人" name="cust_linkman" />
+							<input type="text" class="form-control" id="edit_birthday" placeholder="出生日期" name="st_birthday" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="edit_phone" class="col-sm-2 control-label">固定电话</label>
+						<label for="edit_mobile" class="col-sm-2 control-label">联系方式</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="edit_phone" placeholder="固定电话" name="cust_phone" />
+							<input type="text" class="form-control" id="edit_mobile" placeholder="家庭联系方式" name="st_mobile" />
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="edit_mobile" class="col-sm-2 control-label">移动电话</label>
+						<label for="edit_address" class="col-sm-2 control-label">家庭住址</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="edit_mobile" placeholder="移动电话" name="cust_mobile" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="edit_zipcode" class="col-sm-2 control-label">邮政编码</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="edit_zipcode" placeholder="邮政编码" name="cust_zipcode" />
-						</div>
-					</div>
-					<div class="form-group">
-						<label for="edit_address" class="col-sm-2 control-label">联系地址</label>
-						<div class="col-sm-10">
-							<input type="text" class="form-control" id="edit_address" placeholder="联系地址" name="cust_address" />
+							<input type="text" class="form-control" id="edit_address" placeholder="家庭联系地址" name="st_address" />
 						</div>
 					</div>
 				</form>
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-				<button type="button" class="btn btn-primary" onclick="updateCustomer()">保存修改</button>
+				<button type="button" class="btn btn-primary" onclick="updatestudent()">保存修改</button>
 			</div>
 		</div>
 	</div>
@@ -525,78 +396,74 @@
 <!-- DataTables JavaScript -->
 <script src="<%=basePath%>js/jquery.dataTables.min.js"></script>
 <script src="<%=basePath%>js/dataTables.bootstrap.min.js"></script>
-<!-- Custom Theme JavaScript -->
+<!-- stom Theme JavaScript -->
 <script src="<%=basePath%>js/sb-admin-2.js"></script>
 <!-- 编写js代码 -->
 <script type="text/javascript">
-//清空新建客户窗口中的数据
-	function clearCustomer() {
-	    $("#new_customerName").val("");
-	    $("#new_customerFrom").val("")
-	    $("#new_custIndustry").val("")
-	    $("#new_custLevel").val("")
-	    $("#new_linkMan").val("");
-	    $("#new_phone").val("");
+//清空新建学生窗口中的数据
+	function clearstudent() {
+	    $("#new_studentName").val("");
+	    $("#new_studentSex").val("")
+	    $("#new_stGrade").val("")
+	    $("#new_stClass").val("")
+	    $("#new_birthday").val("");
 	    $("#new_mobile").val("");
-	    $("#new_zipcode").val("");
 	    $("#new_address").val("");
 	}
-	// 创建客户
-	function createCustomer() {
-	$.post("<%=basePath%>customer/create.action",
-	$("#new_customer_form").serialize(),function(data){
+	// 创建学生
+	function createstudent() {
+	$.post("<%=basePath%>student/create.action",
+	$("#new_student_form").serialize(),function(data){
 	        if(data =="OK"){
-	            alert("客户创建成功！");
+	            alert("学生创建成功！");
 	            window.location.reload();
 	        }else{
-	            alert("客户创建失败！");
+	            alert("学生创建失败！");
 	            window.location.reload();
 	        }
 	    });
 	}
-	// 通过id获取修改的客户信息
-	function editCustomer(id) {
+	// 通过id获取修改的学生信息
+	function editstudent(id) {
 	    $.ajax({
 	        type:"get",
-	        url:"<%=basePath%>customer/getCustomerById.action",
+	        url:"<%=basePath%>student/getstudentById.action",
 	        data:{"id":id},
 	        success:function(data) {
-	            $("#edit_cust_id").val(data.cust_id);
-	            $("#edit_customerName").val(data.cust_name);
-	            $("#edit_customerFrom").val(data.cust_source)
-	            $("#edit_custIndustry").val(data.cust_industry)
-	            $("#edit_custLevel").val(data.cust_level)
-	            $("#edit_linkMan").val(data.cust_linkman);
-	            $("#edit_phone").val(data.cust_phone);
-	            $("#edit_mobile").val(data.cust_mobile);
-	            $("#edit_zipcode").val(data.cust_zipcode);
-	            $("#edit_address").val(data.cust_address);
+	            $("#edit_st_id").val(data.st_id);
+	            $("#edit_studentName").val(data.st_name);
+	            $("#edit_studentSex").val(data.st_Sex)
+	            $("#edit_stGrade").val(data.st_Grade)
+	            $("#edit_stClass").val(data.st_Class)
+	            $("#edit_birthday").val(data.st_birthday);
+	            $("#edit_mobile").val(data.st_mobile);
+	            $("#edit_address").val(data.st_address);
 	            
 	        }
 	    });
 	}
-    // 执行修改客户操作
-	function updateCustomer() {
-		$.post("<%=basePath%>customer/update.action",$("#edit_customer_form").serialize(),function(data){
+    // 执行修改学生操作
+	function updatestudent() {
+		$.post("<%=basePath%>student/update.action",$("#edit_student_form").serialize(),function(data){
 			if(data =="OK"){
-				alert("客户信息更新成功！");
+				alert("学生信息更新成功！");
 				window.location.reload();
 			}else{
-				alert("客户信息更新失败！");
+				alert("学生信息更新失败！");
 				window.location.reload();
 			}
 		});
 	}
-	// 删除客户
-	function deleteCustomer(id) {
-	    if(confirm('确实要删除该客户吗?')) {
-	$.post("<%=basePath%>customer/delete.action",{"id":id},
+	// 删除学生
+	function deletestudent(id) {
+	    if(confirm('确实要删除该学生吗?')) {
+	$.post("<%=basePath%>student/delete.action",{"id":id},
 	function(data){
 	            if(data =="OK"){
-	                alert("客户删除成功！");
+	                alert("学生删除成功！");
 	                window.location.reload();
 	            }else{
-	                alert("删除客户失败！");
+	                alert("删除学生失败！");
 	                window.location.reload();
 	            }
 	        });

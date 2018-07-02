@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="bootcrm" />
+        <module name="school" />
         <module name="student" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="bootcrm" target="1.7" />
+      <module name="school" target="1.7" />
       <module name="student" target="1.7" />
     </bytecodeTargetLevel>
   </component>
